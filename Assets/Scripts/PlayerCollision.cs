@@ -11,6 +11,8 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.CompareTag("Obsticle"))
         {
             movement.enabled = false;
+            FindObjectOfType<GameManager>().EndGame();
+            
         }
     }
 }

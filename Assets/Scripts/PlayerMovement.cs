@@ -24,5 +24,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(-sidewaysForce, 0,0);
         }
+
+        if (rb.position.y < -1f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 }
