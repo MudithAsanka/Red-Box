@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;    //Reference to Rigidbody
 
-    public float forwardForce = 2000f;
-    public float sidewayForce = 500f;
+    public float forwardForce = 1000f;
+    public float sidewaysForce = 100f;
     
     
     //Marked as Fixed because of using physics
@@ -18,11 +18,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("d"))
         {
-            rb.AddForce(sidewayForce, 0,0);
+            rb.AddForce(sidewaysForce, 0,0);
         }
         if (Input.GetKey("a"))
         {
-            rb.AddForce(-sidewayForce, 0,0);
+            rb.AddForce(-sidewaysForce, 0,0);
         }
     }
 }
